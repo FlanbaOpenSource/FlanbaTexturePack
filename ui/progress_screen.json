@@ -1,0 +1,47 @@
+{
+  "namespace": "progress",
+
+  "modal_progress_screen@progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "realms_loading_progress_screen@progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "world_loading_progress_screen@progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "overworld_loading_progress_screen@world_loading_progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "nether_loading_progress_screen@world_loading_progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "theend_loading_progress_screen@world_loading_progress_screen": {
+    "$screen_content": "flanba_loadscreen.loading"
+  },
+
+  "world_saving_progress_screen@progress_screen": {
+    "$screen_content": "flanba_loadscreen.saving"
+  },
+
+  "world_convert_modal_progress_screen@progress.progress_screen": {
+    "$screen_content": "flanba_loadscreen.saving"
+  },
+
+  "progress_screen@common.base_screen": {
+    "load_screen_immediately": false,
+    "force_render_below": false,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

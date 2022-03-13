@@ -1,0 +1,200 @@
+{
+
+"namespace": "flanba_loadscreen",
+
+"loading": {
+  "type": "panel",
+  "size": ["100%", "100%"],
+  "controls": [
+    {"logo@flanba_loadscreen.logo": {}},
+    {"background@flanba_loadscreen.background": {}},
+    {"jeb@flanba_loadscreen.jeb": {}},
+    {"loadingg@flanba_loadscreen.loadingg": {}},
+    {"loadinggg@flanba_loadscreen.loadinggg": {}}
+  ]
+},
+
+"saving": {
+  "type": "panel",
+  "size": ["100%", "100%"],
+  "controls": [
+    {"logo@flanba_loadscreen.logo": {}},
+    {"background@flanba_loadscreen.background": {}},
+    {"jeb@flanba_loadscreen.jeb": {}},
+    {"savingg@flanba_loadscreen.savingg": {}},
+    {"savinggg@flanba_loadscreen.savinggg": {}}
+  ]
+},
+
+
+"logo@flanba_loadscreen.logo": {
+  "layer": 3,
+  "type": "image",
+  "texture": "textures/dangthatlogolooksfire",
+  "size": [220, 110],
+  "offset": [0, -30],
+  "anchor_to": "center",
+  "anchor_from": "center"
+},
+
+"loadingg@flanba_loadscreen.loadingg": {
+  "layer": 5,
+  "type": "label",
+  "text": "Gear UP!",
+  "font_scale_factor": 1,
+  "offset": [10, 30],
+  "anchor_to": "center",
+  "anchor_from": "center",
+  "alpha": "@flanba_loadscreen.anim_test1"
+  
+},
+
+"loadinggg@flanba_loadscreen.loadinggg": {
+  "layer": 5,
+  "type": "label",
+  "text": "Joining...",
+  "font_scale_factor": 1,
+  "anchor_to": "center",
+  "anchor_from": "center",
+  "offset": [10, 30],
+  "alpha": "@flanba_loadscreen.anim_test5"
+},
+
+
+"savingg@flanba_loadscreen.loadingg": {
+  "layer": 5,
+  "type": "label",
+  "text": "See ya!",
+  "font_scale_factor": 1,
+  "offset": [10, 30],
+  "anchor_to": "center",
+  "anchor_from": "center",
+  "alpha": "@flanba_loadscreen.anim_test1"
+  
+},
+
+"savinggg@flanba_loadscreen.loadinggg": {
+  "layer": 5,
+  "type": "label",
+  "text": "Have a great day!",
+  "font_scale_factor": 1,
+  "anchor_to": "center",
+  "anchor_from": "center",
+  "offset": [10, 30],
+  "alpha": "@flanba_loadscreen.anim_test5"
+},
+
+"anim_test1": {
+  "anim_type": "alpha",
+  "easing": "linear",
+  "from": 0,
+  "to": 1,
+  "duration": 1,
+  "next": "@flanba_loadscreen.anim_test2"
+},
+
+"anim_test2": {
+  "anim_type": "wait",
+  "duration": 1,
+  "next": "@flanba_loadscreen.anim_test3"
+},
+
+"anim_test3": {
+  "anim_type": "alpha",
+  "easing": "linear",
+  "from": 1,
+  "to": 0,
+  "duration": 1,
+  "next": "@flanba_loadscreen.anim_test4"
+},
+
+"anim_test4": {
+  "anim_type": "wait",
+  "duration": 3,
+  "next": "@flanba_loadscreen.anim_test1"
+},
+
+"anim_test5": {
+  "anim_type": "alpha",
+  "easing": "linear",
+  "from": 0,
+  "to": 0,
+  "duration": 3,
+  "next": "@flanba_loadscreen.anim_test1"
+},
+
+
+"jeb@flanba_loadscreen.jeb": {
+  "layer": 3,
+  "type": "panel",
+  "size": [25, 25],
+  "anchor_to": "center",
+  "anchor_from": "center",
+  "offset": [-30, 30],
+  "controls":[
+    {"@flanba_loadscreen.umh":{"anchor_from":"left_middle","anchor_to":"left_middle"}}]
+},
+
+"sheepy": {
+  "type": "image",
+  "size": ["100%", "100%"],
+  "texture": "textures/cooljeblel",
+  "uv_size": [135, 143]
+},
+
+"umh": {
+  "type":"panel",
+  "size":[25, 25],
+  "controls":[
+    {"anim@flanba_loadscreen.sheepy":{"anchor_from":"center","anchor_to":"center","layer":5,"uv":"@flanba_loadscreen.background1","offset":[0,0]}}]
+},
+
+"anim_uv_background": {
+  "anim_type": "uv",
+  "from": "$uv_frame",
+  "to": "$uv_frame",
+  "duration": 0.03
+},
+
+"background@flanba_loadscreen.background": {
+  "layer": 2,
+  "type": "image",
+  "size": ["150%", "150%"],
+  "texture": "textures/okumdisbg",
+  "anchor_from": "center",
+  "anchor_to": "center"
+},
+
+
+"background1@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 0], "next": "@flanba_loadscreen.background2" },
+  "background2@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 143], "next": "@flanba_loadscreen.background3" },
+  "background3@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 286], "next": "@flanba_loadscreen.background4" },
+  "background4@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 429], "next": "@flanba_loadscreen.background5" },
+  "background5@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 572], "next": "@flanba_loadscreen.background6" },
+  "background6@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 715], "next": "@flanba_loadscreen.background7" },
+  "background7@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 858], "next": "@flanba_loadscreen.background8" },
+  "background8@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1001], "next": "@flanba_loadscreen.background9" },
+  "background9@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1144], "next": "@flanba_loadscreen.background10" },
+  "background10@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1287], "next": "@flanba_loadscreen.background11" },
+  "background11@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1430], "next": "@flanba_loadscreen.background12" },
+  "background12@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1573], "next": "@flanba_loadscreen.background13" },
+  "background13@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1716], "next": "@flanba_loadscreen.background14" },
+  "background14@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 1859], "next": "@flanba_loadscreen.background15" },
+  "background15@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2002], "next": "@flanba_loadscreen.background16" },
+  "background16@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2145], "next": "@flanba_loadscreen.background17" },
+  "background17@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2288], "next": "@flanba_loadscreen.background18" },
+  "background18@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2431], "next": "@flanba_loadscreen.background19" },
+  "background19@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2574], "next": "@flanba_loadscreen.background20" },
+  "background20@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2717], "next": "@flanba_loadscreen.background21" },
+  "background21@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 2860], "next": "@flanba_loadscreen.background22" },
+  "background22@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3003], "next": "@flanba_loadscreen.background23" },
+  "background23@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3146], "next": "@flanba_loadscreen.background24" },
+  "background24@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3289], "next": "@flanba_loadscreen.background25" },
+  "background25@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3432], "next": "@flanba_loadscreen.background26" },
+  "background26@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3575], "next": "@flanba_loadscreen.background27" },
+  "background27@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3718], "next": "@flanba_loadscreen.background28" },
+  "background28@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 3861], "next": "@flanba_loadscreen.background29" },
+  "background29@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 4004], "next": "@flanba_loadscreen.background30" },
+  "background30@flanba_loadscreen.anim_uv_background": { "$uv_frame": [0, 4147], "next": "@flanba_loadscreen.background1" }
+
+}
